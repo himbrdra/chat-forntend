@@ -1,0 +1,17 @@
+
+.login__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  font-family: "poppins";
+  background-color: #5865f2;
+  border: none;
+  padding: 1rem 2rem;
+  width: 40.13rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 2rem;
+}

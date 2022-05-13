@@ -1,0 +1,15 @@
+.error {
+  color: #ff7d7d;
+  font-weight: 600;
+}
+.alert__error {
+  background-color: #ff7d7d;
+  width: auto;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: rgb(44, 44, 44);
+  font-weight: 500;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}

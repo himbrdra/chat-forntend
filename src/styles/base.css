@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.none {
+  display: none;
+}
+.icon {
+  fill: rgb(252, 252, 252);
+  cursor: pointer;
+  width: 3rem;
+  outline: rgb(0, 0, 0);
+  /* fill: #fff; */
+}
+
+/* spinner */
+
+.spinner {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  width: 2rem;
+
+  /* padding: 1rem 2rem; */
+}
+.spinner .path {
+  stroke: #171818;
+  stroke-linecap: round;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+  .freind__side-bar {
+    display: none;
+  }
+  .chat {
+    margin: 0;
+    padding: 0;
+    margin: 5rem 0rem;
+    margin-left: 6rem;
+    padding: 4rem 2rem;
+    overflow: none;
+  }
+  .chat-area-main {
+    overflow: hidden;
+    width: calc(100% - 6rem);
+  }
+  .chat-area-footer {
+    width: calc(90vw - 6rem);
+    padding: 0;
+    margin-left: -2rem;
+  }
+  .message__input-container {
+    width: 100%;
+  }
+}

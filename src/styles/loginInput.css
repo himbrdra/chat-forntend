@@ -1,0 +1,23 @@
+.input__container {
+  margin: 3rem 0 1rem;
+}
+.form__input {
+  display: block;
+  width: 40.16rem;
+  height: 4rem;
+  background-color: #202225;
+  border: none;
+  border-radius: 3px;
+  margin-top: 5px;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "poppins";
+}
+.label {
+  color: #b9bbbe;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

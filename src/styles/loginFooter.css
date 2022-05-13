@@ -1,0 +1,20 @@
+.login__footer {
+  color: #fff;
+  font-weight: 500;
+  font-family: "poppins";
+  padding: 10px 0;
+}
+.footer__text {
+  color: #fff;
+
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.link {
+  color: #00aff4;
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+}
