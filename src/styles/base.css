@@ -84,7 +84,7 @@ html {
 /* responsive */
 @media (max-width: 900px) {
   html {
-    font-size: 50%;
+    font-size: 52%;
   }
   .freind__side-bar {
     display: none;
@@ -108,5 +108,49 @@ html {
   }
   .message__input-container {
     width: 100%;
+  }
+  .message__input-container {
+    width: 100%;
+    margin-left: 2rem;
+  }
+  .message__input {
+    width: 90%;
+  }
+  .send__message-btn {
+    right: -2rem;
+    top: 1rem;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .send__icon {
+    width: 4rem;
+    fill: #d3d3d3;
+  }
+  .send__message-btn:hover {
+    background-color: #3e3f3f;
+  }
+  .imoji__icon {
+    right: 12%;
+  }
+  .avtar {
+  }
+  .top__nav {
+    padding-left: 7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .chat-area-main {
+    padding: 4.7rem 0.5rem;
+    width: 100%;
+  }
+  .chat {
+    padding: 0.5rem;
   }
 }

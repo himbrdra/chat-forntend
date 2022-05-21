@@ -5,6 +5,5 @@ const friend = axios.create({
 });
 
 const user = JSON.parse(window.localStorage.getItem("user"));
-console.log('userandtoken',user?.token)
 friend.defaults.headers.common["Authorization"] = user?.token;
 export default friend;

@@ -2,19 +2,23 @@ import Avatar from "./Avatar";
 import Status from "./Status";
 import { connect } from "react-redux";
 import { selectConversation } from "../actions";
-const Freind = ({ friendList, selectConversation }) => {
+const Friend = ({ friendList, selectConversation }) => {
   // console.log("onlineUsers", onlineUsers);
   return friendList.map((friends) => {
     if (!friends) return "";
     return friends.map((friend) => (
       <div
         onClick={() =>
-          selectConversation({ id: friend?.id, username: friend?.username })
+          selectConversation({
+            id: friend?.id,
+            username: friend?.username,
+            image: friend.image,
+          })
         }
         key={friend?.id}
-        className="freind"
+        className="friend"
       >
-        <Avatar username={friend?.username} />
+        <Avatar image={friend?.image} username={friend?.username} />
         <Status userId={friend.id} />
       </div>
     ));
@@ -26,4 +30,4 @@ const mapStateToProps = (state) => {
 };
 export default connect(mapStateToProps, {
   selectConversation,
-})(Freind);
+})(Friend);

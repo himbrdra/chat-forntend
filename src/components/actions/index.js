@@ -10,40 +10,42 @@ export const registerUser =
       dispatch({ type: "REGISTER_USER", payload: data });
       window.localStorage.setItem("user", JSON.stringify(data));
       setIsLoading(false);
-      navigate("/");
+      navigate("/profile");
     } catch (error) {
       setIsLoading(false);
       alert("register actions", error);
     }
   };
 
-export const loginUser = (formValues, navigate,setIsLoading) => async (dispatch) => {
-  try {
-    setIsLoading(true)
-    const { data } = await auth.post("/login", formValues);
-    dispatch({ type: "LOGIN_USER", payload: data });
-    window.localStorage.setItem("user", JSON.stringify(data));
-    navigate("/");
-    setIsLoading(false)
-  } catch (err) {
-    setIsLoading(false)
-    return err.response.data.error;
-  }
-};
+export const loginUser =
+  (formValues, navigate, setIsLoading) => async (dispatch) => {
+    try {
+      setIsLoading(true);
+      const { data } = await auth.post("/login", formValues);
+      dispatch({ type: "LOGIN_USER", payload: data });
+      window.localStorage.setItem("user", JSON.stringify(data));
+      navigate("/");
+      setIsLoading(false);
+    } catch (err) {
+      setIsLoading(false);
+      return err.response.data.error;
+    }
+  };
 
-export const sendInvitaion = (reciverEmail,setIsloading) => async (dispatch) => {
-  try {
-    setIsloading(true)
-    const user = JSON.parse(window.localStorage.getItem("user"));
-    friend.defaults.headers.common["Authorization"] = user?.token;
-    const res = await friend.post("/invitaion", reciverEmail);
-    setIsloading(false)
-    //  are we need to dispatch an action
-  } catch (err) {
-    setIsloading(false)
-    alert(err.response.data.error);
-  }
-};
+export const sendInvitaion =
+  (reciverEmail, setIsloading) => async (dispatch) => {
+    try {
+      setIsloading(true);
+      const user = JSON.parse(window.localStorage.getItem("user"));
+      friend.defaults.headers.common["Authorization"] = user?.token;
+      const res = await friend.post("/invitaion", reciverEmail);
+      setIsloading(false);
+      //  are we need to dispatch an action
+    } catch (err) {
+      setIsloading(false);
+      alert(err.response.data.error);
+    }
+  };
 
 export const getInvitaion = (invitaions) => async (dispatch) => {
   try {

@@ -30,7 +30,14 @@ const RegisetPage = ({ registerUser }) => {
 
     setRegisterData("");
     setSubmited(false);
-  }, [submited, registerData, setRegisterData, validForm, registerUser,navigate]);
+  }, [
+    submited,
+    registerData,
+    setRegisterData,
+    validForm,
+    registerUser,
+    navigate,
+  ]);
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -77,7 +84,7 @@ const RegisetPage = ({ registerUser }) => {
             <TextError error={"passwrod must be longer then 6 characater"} />
           ) : null}
 
-            <LoginBtn isLoading={isLoading} btnText={"Register"} />
+          <LoginBtn isLoading={isLoading} btnText={"Register"} />
           <LoginFooter text={"already have an account?"} link={"login"} />
         </LoginFormContainer>
       </LoginContainer>

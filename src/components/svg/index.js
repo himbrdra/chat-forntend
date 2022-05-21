@@ -160,7 +160,7 @@ export const InvitIcon = () => (
 );
 
 export const SendIcon = () => (
-  <svg className="icon" version="1.1" viewBox="0 0 512.001 512.001">
+  <svg className="icon send__icon" version="1.1" viewBox="0 0 512.001 512.001">
     <g>
       <g>
         <path
@@ -200,10 +200,30 @@ export const CallIcon = () => (
   </svg>
 );
 
-export const Spinner = ()=>{
- return   (
-  <svg class="spinner" viewBox="0 0 50 50">
-  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-</svg>
- )
-}
+export const Spinner = () => {
+  return (
+    <svg class="spinner" viewBox="0 0 50 50">
+      <circle
+        class="path"
+        cx="25"
+        cy="25"
+        r="20"
+        fill="none"
+        stroke-width="5"
+      ></circle>
+    </svg>
+  );
+};
+
+export const PlusIcon = () => (
+  <svg
+    id="Layer_1"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    data-name="Layer 1"
+    className="plus__icon"
+  >
+    <path d="m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1 -10 10zm5-10a1 1 0 0 1 -1 1h-3v3a1 1 0 0 1 -2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 2 0v3h3a1 1 0 0 1 1 1z" />
+  </svg>
+);

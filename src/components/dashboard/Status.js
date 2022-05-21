@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { connect } from "react-redux";
 const Status = ({ userId, onlineUsers }) => {
   let className = "offline";

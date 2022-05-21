@@ -6,6 +6,7 @@ import { acceptInvit, rejectInvit } from "../actions";
 import { useState } from "react";
 
 const Invitaion = ({ invitaions, acceptInvit, rejectInvit }) => {
+  console.log(invitaions);
   const [state, setState] = useState("");
   return invitaions.map((invitaion) => {
     const handleAcceptInvitation = () => {
@@ -25,7 +26,7 @@ const Invitaion = ({ invitaions, acceptInvit, rejectInvit }) => {
     const { username } = invitaion.senderId;
     return (
       <div key={invitaion._id} className={`freind invitaion`}>
-        <Avatar username={username} />
+        <Avatar image={invitaion.senderId.image} username={username} />
         <div className="invitaion__action">
           <button
             onClick={handleAcceptInvitation}

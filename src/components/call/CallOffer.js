@@ -9,7 +9,7 @@ const CallOffer = ({ type, username, user, call }) => {
   };
   return (
     <div className="call__container">
-      <h2 className="call__type">Incomong {type}</h2>
+      <h2 className="call__type">Incoming {type}</h2>
       <CalleeImg username={username} />
       {user === "caller" ? (
         <CallOfferAction handleCallAccept={handleCallAccept} />

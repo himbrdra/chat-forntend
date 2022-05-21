@@ -6,6 +6,7 @@ import CallOffer from "../call/CallOffer";
 import { CallIcon, VideoIcon } from "../svg";
 
 const TopNav = ({ conversation }) => {
+  console.log("conversation", conversation);
   const [callUi, setCallUi] = useState(false);
 
   const handleCallBtnClick = () => {
@@ -19,7 +20,12 @@ const TopNav = ({ conversation }) => {
       {conversation.username && (
         <>
           <div className="top__nav">
-            {<Avatar username={conversation.username} />}
+            {
+              <Avatar
+                image={conversation.image}
+                username={conversation.username}
+              />
+            }
           </div>
           <button
             onClick={handleCallBtnClick}
